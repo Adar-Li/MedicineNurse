@@ -21,6 +21,6 @@
 //数据解析的方法
 - (void)analysisDataWithURL:(NSString *)urlStr :(void(^)())result;
 
-
+- (void)analysisCellDataWithURL:(NSString *)urlStr :(void(^)())result;
 
 @end

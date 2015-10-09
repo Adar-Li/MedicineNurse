@@ -9,7 +9,6 @@
 #import "SufferHelper.h"
 #import "AFNetworking.h"
 #import "SufferModel.h"
-#define NetAndWed @"http://www.dxy.cn/webservices/article/list/tags?ac=4124c5f1-1029-4fda-b06f-a87ac5ad8d9f&limit=20&mc=df4e09ce2cf802df592ff64773dbb40156b4d58dudidfor7&pge=1&tags=53114"
 
 @interface SufferHelper ()
 @property (nonatomic ,strong)NSMutableArray *mutArray;
@@ -32,10 +31,10 @@
 
 //数据解析
 
-- (void)requestAllSufferWithFinish:(void(^)())result
+- (void)requestAllSufferWith:(NSInteger)page Finish:(void(^)())result
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSString *Str = NetAndWed;
+    NSString *Str = NetAndWed(page);
     
     
     [manager GET:Str parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
@@ -45,7 +44,6 @@
         
         for (NSDictionary *dic in dict[@"list"]) {
             
-
             SufferModel *model = [SufferModel new];
             [model setValuesForKeysWithDictionary:dic];
             [self.mutArray addObject:model];
@@ -83,10 +81,9 @@
 {
     
     return [_mutArray mutableCopy];
-    
- 
-    
-    
+  
 }
+
+
 
 @end

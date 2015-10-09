@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RecommendModel.h"
+#import "HSubjectModel.h"
 
 @interface HSBCell : UITableViewCell
 
@@ -16,7 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lable4Title;
 
-- (void)setvalueWithModel:(RecommendModel *)item;
+- (void)setvalueWithModel:(HSubjectModel*)item;
 
 
 @end

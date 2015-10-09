@@ -101,19 +101,13 @@
     
     }else
     {
-        
-        self.ArticleLabel.text = @"专题";
-        self.ArticleLabel.textColor = [UIColor redColor];
-        
-        
-    }
-    
-    
-    
   
+        self.ArticleLabel.text = [[data.stag valueForKey:@"type"] substringToIndex:2];
+        self.ArticleLabel.textAlignment = NSTextAlignmentNatural;
+        self.ArticleLabel.textColor = [UIColor redColor];
     
-    
-    
+    }
+  
 }
 
 

@@ -2,3 +2,10 @@ pod 'AFNetworking', '~> 2.6.0'
 pod "SDWebImage"
 
 
+
+pod 'AMap3DMap'
+pod 'AMapSearch'
+
+pod 'SVPullToRefresh'
+
+

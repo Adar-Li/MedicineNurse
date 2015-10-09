@@ -27,7 +27,7 @@
 @property (nonatomic ,strong)NSString  *createTime;
 
 @property (nonatomic ,strong)NSString  *desc; //标题
-@property (nonatomic ,strong)NSString  *tagid; //数据id
+@property (nonatomic ,strong)NSString  *tagid; // 数据id
 @property (nonatomic ,strong)NSString  *tagName; //
 @property (nonatomic ,strong)NSString  *numOfArticle;
 @property (nonatomic ,strong)NSString  *type;  //专题标签

@@ -27,12 +27,19 @@
     
     [self.view addSubview:web];
     [web loadRequest:request];
-    
-    
-    
-    
-    
+
 }
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    
+    //执行事先写好的js代码
+    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.getElementsByClassName('class')[0].style.display = 'none'"];
+}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
