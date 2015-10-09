@@ -37,6 +37,7 @@
 		C24C12211BC4A8C3000EF4A0 /* UserListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24C12201BC4A8C3000EF4A0 /* UserListController.m */; settings = {ASSET_TAGS = (); }; };
 		C24C12251BC4ABC5000EF4A0 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C24C12241BC4ABC5000EF4A0 /* default@2x.png */; settings = {ASSET_TAGS = (); }; };
 		C24F3DC41BC6583E00F65889 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F3DC31BC6583E00F65889 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C26E8B661BC7AB3A00723915 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C26E8B651BC7AB3A00723915 /* search@2x.png */; settings = {ASSET_TAGS = (); }; };
 		C27B50791BC5F9DC00CB6E3E /* SufferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27B50771BC5F9DC00CB6E3E /* SufferViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C27B507A1BC5F9DC00CB6E3E /* SufferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C27B50781BC5F9DC00CB6E3E /* SufferViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA67A1BC3A9DA00B394F5 /* main.m */; };
@@ -136,6 +137,7 @@
 		C24C12241BC4ABC5000EF4A0 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
 		C24F3DC21BC6583E00F65889 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C24F3DC31BC6583E00F65889 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C26E8B651BC7AB3A00723915 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		C27B50761BC5F9DC00CB6E3E /* SufferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferViewController.h; sourceTree = "<group>"; };
 		C27B50771BC5F9DC00CB6E3E /* SufferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SufferViewController.m; sourceTree = "<group>"; };
 		C27B50781BC5F9DC00CB6E3E /* SufferViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SufferViewController.xib; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 				C23A32F11BC558E4007320E1 /* img */,
 				C2C2C21C1BC5362300125E4F /* location_no.png */,
 				C2C2C21D1BC5362300125E4F /* location_yes.png */,
+				C26E8B651BC7AB3A00723915 /* search@2x.png */,
 				C24C12241BC4ABC5000EF4A0 /* default@2x.png */,
 			);
 			path = Resources;
@@ -596,7 +599,11 @@
 				TargetAttributes = {
 					C28EA6751BC3A9DA00B394F5 = {
 						CreatedOnToolsVersion = 7.0;
+
 						DevelopmentTeam = M27U6W77DY;
+
+						DevelopmentTeam = G9K79W43P2;
+
 					};
 					C28EA68E1BC3A9DA00B394F5 = {
 						CreatedOnToolsVersion = 7.0;
@@ -657,6 +664,7 @@
 				C2C2C21F1BC5362300125E4F /* location_yes.png in Resources */,
 				C2F35F081BC66C47000A6B4F /* HSBCell.xib in Resources */,
 				C2C2C21E1BC5362300125E4F /* location_no.png in Resources */,
+				C26E8B661BC7AB3A00723915 /* search@2x.png in Resources */,
 				C2F35F031BC614B4000A6B4F /* IanScrollViewDefault@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -893,7 +901,11 @@
 				INFOPLIST_FILE = MedicineNurse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurs;
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNur;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -908,7 +920,11 @@
 				INFOPLIST_FILE = MedicineNurse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurs;
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNur;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
