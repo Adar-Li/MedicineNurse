@@ -11,8 +11,12 @@
 #import "SufferModel.h"
 #import "SufferHelper.h"
 #import "ViewController.h"
+#import "SVPullToRefresh.h"
+#import "SufferDeTableViewController.h"
+
 
 @interface SufferTableViewController ()
+@property (nonatomic ,assign)NSInteger *page;
 
 @end
 
@@ -28,6 +32,12 @@
     //注册cell
     [self.tableView registerClass:[SufferTableViewCell class] forCellReuseIdentifier:@"cell"];
     
+    self.page = 0;
+    
+    
+    
+    
+    
 //    //刷新View视图
 //    [[SufferHelper sharedSuffer]requestAllSufferWithFinish:^{
 //        
@@ -37,6 +47,34 @@
 //   
 //    
 //   }
+    
+    __weak typeof(self) weakself = self;
+    
+    [self.tableView addPullToRefreshWithActionHandler:^{
+    
+       [[SufferHelper sharedSuffer]requestAllSufferWith:1 Finish:^{
+           [weakself.tableView reloadData];
+        
+           [weakself.tableView.pullToRefreshView stopAnimating];
+           
+           
+       }];
+        
+        
+    }];
+    
+     weakself.page++;
+    
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+       
+        [[SufferHelper sharedSuffer]requestAllSufferWith:*(weakself.page) Finish:^{
+        
+            [weakself.tableView.infiniteScrollingView stopAnimating];
+       
+        }];
+     
+    }];
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,16 +120,27 @@
 {
     ViewController *Suffer = [[ViewController alloc]init];
     
-   
-    SufferModel *model = [[SufferHelper sharedSuffer]itemWithIndex:indexPath.row];
     
-    Suffer.str = model.url;
+   SufferModel *model = [[SufferHelper sharedSuffer]itemWithIndex:indexPath.row];
     
     
-    [self.navigationController pushViewController:Suffer animated:YES];
-    
-    
-    
+    if (model.stag == nil) {
+        
+        Suffer.str = model.url;
+        [self.navigationController pushViewController:Suffer animated:YES];
+        
+    }else
+    {
+        
+        SufferDeTableViewController *sufferde = [[SufferDeTableViewController alloc]init];
+        
+        sufferde.tail = [model.stag valueForKey:@"tagid"];
+        
+        NSLog(@"===================%@",sufferde.tail);
+        
+        [self.navigationController pushViewController:sufferde animated:YES];
+       
+    }
     
 }
 

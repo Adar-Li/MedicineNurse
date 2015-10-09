@@ -37,6 +37,7 @@
 		C24C12211BC4A8C3000EF4A0 /* UserListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24C12201BC4A8C3000EF4A0 /* UserListController.m */; settings = {ASSET_TAGS = (); }; };
 		C24C12251BC4ABC5000EF4A0 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C24C12241BC4ABC5000EF4A0 /* default@2x.png */; settings = {ASSET_TAGS = (); }; };
 		C24F3DC41BC6583E00F65889 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F3DC31BC6583E00F65889 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C26E8B661BC7AB3A00723915 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C26E8B651BC7AB3A00723915 /* search@2x.png */; settings = {ASSET_TAGS = (); }; };
 		C27B50791BC5F9DC00CB6E3E /* SufferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27B50771BC5F9DC00CB6E3E /* SufferViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C27B507A1BC5F9DC00CB6E3E /* SufferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C27B50781BC5F9DC00CB6E3E /* SufferViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA67A1BC3A9DA00B394F5 /* main.m */; };
@@ -48,6 +49,7 @@
 		C28EA6BD1BC3C52700B394F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA6AF1BC3C52700B394F5 /* AppDelegate.m */; };
 		C28EA6E31BC3E72C00B394F5 /* FactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA6E01BC3E72C00B394F5 /* FactModel.m */; settings = {ASSET_TAGS = (); }; };
 		C28EA6E41BC3E72C00B394F5 /* SubjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA6E21BC3E72C00B394F5 /* SubjectModel.m */; settings = {ASSET_TAGS = (); }; };
+		C2991DFD1BC7C56D00E76FB9 /* SufferDeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2991DFC1BC7C56D00E76FB9 /* SufferDeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C299EAF61BC3CF7E0087A7F8 /* CommonSymptomsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C299EAF51BC3CF7E0087A7F8 /* CommonSymptomsModel.m */; };
 		C2B830491BC3E60A00E09C4F /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B830481BC3E60A00E09C4F /* RecommendModel.m */; settings = {ASSET_TAGS = (); }; };
 		C2C2C21E1BC5362300125E4F /* location_no.png in Resources */ = {isa = PBXBuildFile; fileRef = C2C2C21C1BC5362300125E4F /* location_no.png */; settings = {ASSET_TAGS = (); }; };
@@ -129,7 +131,7 @@
 		C23A346D1BC55D0C007320E1 /* hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand.png; sourceTree = "<group>"; };
 		C23A346F1BC562CA007320E1 /* CommonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHelper.h; sourceTree = "<group>"; };
 		C23A34701BC562CA007320E1 /* CommonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHelper.m; sourceTree = "<group>"; };
-		C248D0BE1BC40087004BBF62 /* SufferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferModel.h; sourceTree = "<group>"; };
+		C248D0BE1BC40087004BBF62 /* SufferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SufferModel.h; path = ../../../Models/SufferModel.h; sourceTree = "<group>"; };
 		C248D0BF1BC40087004BBF62 /* SufferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SufferModel.m; sourceTree = "<group>"; };
 		C24C12191BC4A84E000EF4A0 /* CommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonController.h; sourceTree = "<group>"; };
 		C24C121A1BC4A84E000EF4A0 /* CommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonController.m; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		C24C12241BC4ABC5000EF4A0 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
 		C24F3DC21BC6583E00F65889 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C24F3DC31BC6583E00F65889 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C26E8B651BC7AB3A00723915 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		C27B50761BC5F9DC00CB6E3E /* SufferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferViewController.h; sourceTree = "<group>"; };
 		C27B50771BC5F9DC00CB6E3E /* SufferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SufferViewController.m; sourceTree = "<group>"; };
 		C27B50781BC5F9DC00CB6E3E /* SufferViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SufferViewController.xib; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 		C28EA6E11BC3E72C00B394F5 /* SubjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectModel.h; sourceTree = "<group>"; };
 		C28EA6E21BC3E72C00B394F5 /* SubjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectModel.m; sourceTree = "<group>"; };
 		C28EA6E51BC3FE1400B394F5 /* a.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = a.h; sourceTree = "<group>"; };
+		C2991DFB1BC7C56D00E76FB9 /* SufferDeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferDeTableViewController.h; sourceTree = "<group>"; };
+		C2991DFC1BC7C56D00E76FB9 /* SufferDeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SufferDeTableViewController.m; sourceTree = "<group>"; };
 		C299EAF41BC3CF7E0087A7F8 /* CommonSymptomsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSymptomsModel.h; sourceTree = "<group>"; };
 		C299EAF51BC3CF7E0087A7F8 /* CommonSymptomsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSymptomsModel.m; sourceTree = "<group>"; };
 		C2B830471BC3E60A00E09C4F /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
@@ -430,7 +435,6 @@
 				C299EAF51BC3CF7E0087A7F8 /* CommonSymptomsModel.m */,
 				C2B830471BC3E60A00E09C4F /* RecommendModel.h */,
 				C2B830481BC3E60A00E09C4F /* RecommendModel.m */,
-				C248D0BE1BC40087004BBF62 /* SufferModel.h */,
 				C248D0BF1BC40087004BBF62 /* SufferModel.m */,
 				C2002E9B1BC4A96C0007F7B9 /* CommonDetailModel.h */,
 				C2002E9C1BC4A96C0007F7B9 /* CommonDetailModel.m */,
@@ -452,6 +456,7 @@
 				C23A32F11BC558E4007320E1 /* img */,
 				C2C2C21C1BC5362300125E4F /* location_no.png */,
 				C2C2C21D1BC5362300125E4F /* location_yes.png */,
+				C26E8B651BC7AB3A00723915 /* search@2x.png */,
 				C24C12241BC4ABC5000EF4A0 /* default@2x.png */,
 			);
 			path = Resources;
@@ -493,6 +498,7 @@
 				C2D15F1B1BC54C81000CB956 /* HCCell.xib */,
 				C2F35F041BC66C47000A6B4F /* HSBCell.h */,
 				C2F35F051BC66C47000A6B4F /* HSBCell.m */,
+				C248D0BE1BC40087004BBF62 /* SufferModel.h */,
 				C2F35F061BC66C47000A6B4F /* HSBCell.xib */,
 			);
 			path = Cells;
@@ -516,6 +522,8 @@
 				C23A32EE1BC53F31007320E1 /* CommonDetailsController.m */,
 				C2F35F091BC67014000A6B4F /* HomeSBController.h */,
 				C2F35F0A1BC67014000A6B4F /* HomeSBController.m */,
+				C2991DFB1BC7C56D00E76FB9 /* SufferDeTableViewController.h */,
+				C2991DFC1BC7C56D00E76FB9 /* SufferDeTableViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -619,6 +627,11 @@
 				TargetAttributes = {
 					C28EA6751BC3A9DA00B394F5 = {
 						CreatedOnToolsVersion = 7.0;
+
+						DevelopmentTeam = M27U6W77DY;
+
+						DevelopmentTeam = G9K79W43P2;
+
 					};
 					C28EA68E1BC3A9DA00B394F5 = {
 						CreatedOnToolsVersion = 7.0;
@@ -682,6 +695,7 @@
 				C2C2C21F1BC5362300125E4F /* location_yes.png in Resources */,
 				C2F35F081BC66C47000A6B4F /* HSBCell.xib in Resources */,
 				C2C2C21E1BC5362300125E4F /* location_no.png in Resources */,
+				C26E8B661BC7AB3A00723915 /* search@2x.png in Resources */,
 				C2F35F031BC614B4000A6B4F /* IanScrollViewDefault@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -768,6 +782,7 @@
 				C2002EA31BC4C7C30007F7B9 /* HomeController.m in Sources */,
 				C2F35F021BC614B4000A6B4F /* IanScrollView.m in Sources */,
 				C2D15F1C1BC54C81000CB956 /* HCCell.m in Sources */,
+				C2991DFD1BC7C56D00E76FB9 /* SufferDeTableViewController.m in Sources */,
 				C2002EA01BC4A96C0007F7B9 /* DrugAndnewsListModel.m in Sources */,
 				C2F35F0E1BC67461000A6B4F /* HSubjectModel.m in Sources */,
 				C248D0C01BC40087004BBF62 /* SufferModel.m in Sources */,
@@ -914,11 +929,16 @@
 			baseConfigurationReference = 92CC3A1C94F2DBB8C58B1320 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = MedicineNurse/MedicineNurse.pch;
 				INFOPLIST_FILE = MedicineNurse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurse;
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurs;
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNur;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -928,11 +948,16 @@
 			baseConfigurationReference = DF3A9E4C6BB109E4FF0572F2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = MedicineNurse/MedicineNurse.pch;
 				INFOPLIST_FILE = MedicineNurse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurse;
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurs;
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNur;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -19,10 +19,7 @@
 
 
 //数据解析
-- (void)requestAllSufferWithFinish:(void(^)())result;
-
-
-
+- (void)requestAllSufferWith:(NSInteger)page Finish:(void(^)())result;
 
 /**
  *  根据一个index返回一个model

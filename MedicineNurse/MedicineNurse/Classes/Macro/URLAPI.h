@@ -18,7 +18,11 @@
 
 
   //center用药咨询
-#define NetAndWed @"http://www.dxy.cn/webservices/article/list/tags?ac=4124c5f1-1029-4fda-b06f-a87ac5ad8d9f&limit=20&mc=df4e09ce2cf802df592ff64773dbb40156b4d58dudidfor7&pge=1&tags=53114"
+#define NetAndWed(page) [NSString stringWithFormat:@"http://www.dxy.cn/webservices/article/list/tags?ac=4124c5f1-1029-4fda-b06f-a87ac5ad8d9f&limit=20&mc=df4e09ce2cf802df592ff64773dbb40156b4d58dudidfor7&pge=%ld&tags=53114",page]
+//cell中专题网址
+#define detail(tab) [NSString stringWithFormat:@"http://www.dxy.cn/webservices/article/list/tags?ac=4124c5f1-1029-4fda-b06f-a87ac5ad8d9f&limit=20&mc=df4e09ce2cf802df592ff64773dbb40156b4d58dudidfor7&pge=1&tags=%@&token=TGT-154773-cafT3zxC4UWhQIDjQOLnkNB07AE0iHCpYH7-50&u=Adar410",tab];
+
+
 
 
 //推荐界面轮播图
