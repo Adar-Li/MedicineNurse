@@ -62,7 +62,8 @@ static NSString * hccCell = @"hccCellID";
     self.mainScroll.showsVerticalScrollIndicator = NO;
     self.mainScroll.delegate = self;
     self.mainScroll.pagingEnabled = YES;
-    //    self.mainScroll.scrollEnabled = NO;
+    self.mainScroll.delaysContentTouches = NO;
+   
     [self.view addSubview:self.mainScroll];
 }
 
@@ -78,12 +79,12 @@ static NSString * hccCell = @"hccCellID";
     
     [self drawScrollViewForHeader];
     [self.mainScroll addSubview:self.tableView];
-    //暂时放到这里
-        HomeSBController * SBVC = [[HomeSBController alloc]init];
-        SBVC.view.frame = CGRectMake(kScremWidth,-20, kScremWidth, kScremHeight - 100 );
-        [self addChildViewController:SBVC];
-    
-        [self.mainScroll addSubview:SBVC.view];
+//    //暂时放到这里
+//        HomeSBController * SBVC = [[HomeSBController alloc]init];
+//        SBVC.view.frame = CGRectMake(kScremWidth,-20, kScremWidth, kScremHeight - 100 );
+//        [self addChildViewController:SBVC];
+//    
+//        [self.mainScroll addSubview:SBVC.view];
     
 }
 
@@ -94,29 +95,29 @@ static NSString * hccCell = @"hccCellID";
 #pragma mark -- ScrollView的代理事件--
 
 ////
-//
-//- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
 
 //    if (scrollView.scrollEnabled == NO) {
 //        scrollView.scrollEnabled = YES;
 //    }
 //        scrollView.scrollEnabled = NO;
 
-//    HomeSBController * SBVC = [[HomeSBController alloc]init];
-//    SBVC.view.frame = CGRectMake(kScremWidth,-20, kScremWidth, kScremHeight - 100 );
-//    [self addChildViewController:SBVC];
-//    
-//    [self.mainScroll addSubview:SBVC.view];
-//    
-//    
-//}
-//
-////scrollView停止减速时的方法
-//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-//    
-//    [self scrollViewDidEndScrollingAnimation:scrollView];
-//    
-//}
+    HomeSBController * SBVC = [[HomeSBController alloc]init];
+    SBVC.view.frame = CGRectMake(kScremWidth,-20, kScremWidth, kScremHeight - 100 );
+    [self addChildViewController:SBVC];
+    
+    [self.mainScroll addSubview:SBVC.view];
+    
+    
+}
+
+//scrollView停止减速时的方法
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+    
+}
 
 
 
