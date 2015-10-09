@@ -1,35 +1,38 @@
 //
-//  CommonClassifyController.m
+//  CommonTableController.m
 //  MedicineNurse
 //
-//  Created by lanou3g on 15/10/7.
+//  Created by lanou3g on 15/10/9.
 //  Copyright © 2015年 Adar-Li. All rights reserved.
 //
 
-#import "CommonClassifyController.h"
-#import "CommonClassifyCell.h"
-#import "CommonHelper.h"
+#import "CommonTableController.h"
+#import "CommonClickCell.h"
 
-@interface CommonClassifyController ()
+@interface CommonTableController ()
 
 @end
 
-@implementation CommonClassifyController
+@implementation CommonTableController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //隐藏滑动条
-    self.tableView.showsVerticalScrollIndicator = NO;
-    
-    //注册Cell
-    [self.tableView registerNib:[UINib nibWithNibName:@"CommonClassifyCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-    self.view.backgroundColor = [UIColor colorWithWhite:0.902 alpha:1.000];
-    
-    [[CommonHelper shareHelp] requestCommonList:^{
-        [self.tableView reloadData];
-    }];
 
+    //注册Cell
+    [self.tableView registerNib:[UINib nibWithNibName:@"CommonClickCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    
+    //Content
+    self.label4Content = [[UILabel alloc]initWithFrame:CGRectMake(0, 64, kScremWidth, 64)];
+    _label4Content.backgroundColor = [UIColor lightGrayColor];
+    _label4Content.text = @"电脑、手机党们经常会感觉到头痛、疲惫、视力模糊、全身酸痛等症状，你需要警惕了。";
+    _label4Content.numberOfLines = 0;
+    self.tableView.tableHeaderView = _label4Content;
+    
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 10)];
+    view.backgroundColor = [UIColor colorWithWhite:0.902 alpha:1.000];
+    self.tableView.tableFooterView = view;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,40 +44,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 11;
+    
+    return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
-}
-
-//点击事件
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
-    //接收点击的哪一个数组
-    NSArray *array = [[CommonHelper shareHelp].commonDeArray[indexPath.row] mutableCopy];
-    //创建通知
-    NSDictionary *dict = @{@"array" : array};
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"load" object:nil userInfo:dict];
+    
+    return 75;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CommonClassifyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    //科目图片
-    NSArray *imageArray = @[@"Medicin",@"Surgery",@"Chinese",@"Male",@"Organs",@"Rheumatism",@"Female",@"Infect",@"hand",@"Child",@"Mentality"];
-    NSString *string = imageArray[indexPath.row];
-    cell.imageView4Classify.image = [UIImage imageNamed:string];
-    
-    CommonSymptomsModel *model = [CommonHelper shareHelp].commonArray[indexPath.row];
-    cell.model = model;
-    
-    return cell;
+        CommonClickCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        
+        
+        return cell;
+
 }
 
 

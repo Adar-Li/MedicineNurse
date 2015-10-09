@@ -9,7 +9,7 @@
 #import "CommonDetailsController.h"
 #import "CommonDetailsCell.h"
 #import "CommonSymptomsModel.h"
-#import "CommonClickController.h"
+#import "CommonTableController.h"
 
 @interface CommonDetailsController ()
 
@@ -56,13 +56,13 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 55;
+    return 45;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    CommonClickController *commonCC = [CommonClickController new];
-    [self.navigationController pushViewController:commonCC animated:YES];
+    CommonTableController *commonTC = [CommonTableController new];
+    [self.navigationController pushViewController:commonTC animated:YES];
 }
 
 

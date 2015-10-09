@@ -25,7 +25,7 @@
     self.left = [CommonClassifyController new];
     _left.view.frame = CGRectMake(0, 64, self.view.frame.size.width/2.8, self.view.frame.size.height - 110);
     self.right = [CommonDetailsController new];
-    _right.view.frame = CGRectMake(self.view.frame.size.width/3, 64, self.view.frame.size.width, self.view.frame.size.height - 110);
+    _right.view.frame = CGRectMake(self.view.frame.size.width/3, 0, self.view.frame.size.width, self.view.frame.size.height + 5);
     
     [self.view addSubview:_right.view];
     [self.view addSubview:_left.view];
