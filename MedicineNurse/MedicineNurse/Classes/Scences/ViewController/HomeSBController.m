@@ -9,19 +9,26 @@
 #import "HomeSBController.h"
 #import "HSBCell.h"
 #import <UIImageView+WebCache.h>
+#import <AFNetworking.h>
+#import "HSubjectModel.h"
 
 @interface HomeSBController ()
+
+@property(nonatomic,strong)NSMutableArray * SBMutArray;
 
 @end
 
 @implementation HomeSBController
 static NSString * hsbcell = @"hsbcell";
 
+
 - (void)viewDidLoad {
-    
-//    self.tableView
-    
+
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     [super viewDidLoad];
+    [self analysisData];
+    
     //注册自定义cell
     [self.tableView registerNib:[UINib nibWithNibName:@"HSBCell" bundle:nil] forCellReuseIdentifier:hsbcell];
 
@@ -35,26 +42,52 @@ static NSString * hsbcell = @"hsbcell";
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 10;
+    return self.SBMutArray.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HSBCell * cell = [tableView dequeueReusableCellWithIdentifier:hsbcell forIndexPath:indexPath];
+    HSubjectModel *model = self.SBMutArray[indexPath.row];
     
+    HSBCell * cell = [tableView dequeueReusableCellWithIdentifier:hsbcell forIndexPath:indexPath];
+    [cell setvalueWithModel:model];
     return cell;
 }
 
 //解析主体数据
 - (void)analysisData{
+    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:kHomeSBURL parameters:nil success:^(AFHTTPRequestOperation * operation, id   responseObject) {
+       NSArray * array =  responseObject[@"data"][@"items"];
+        for (NSDictionary * dict in array) {
+            
+            HSubjectModel * model = [HSubjectModel new];
+            [model setValuesForKeysWithDictionary:dict];
+            [self.SBMutArray addObject:model];
+        }
+        
+        [self.tableView reloadData];
+    } failure:^(AFHTTPRequestOperation * operation, NSError * error) {
+        
+    }];
+}
+
+//设置cell的高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+    return 90;
+}
+
+#pragma mark --lazy load --
+- (NSMutableArray *)SBMutArray{
+    if (_SBMutArray == nil) {
+        _SBMutArray = [[NSMutableArray alloc]init];
+    }
+    return _SBMutArray;
 }
 
 

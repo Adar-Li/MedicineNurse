@@ -52,6 +52,14 @@
     }];
 }
 
+//解析cell数据的方法
+- (void)analysisCellDataWithURL:(NSString *)urlStr :(void(^)())result{
+    
+    
+}
+
+
+
 #pragma mark --lazy load--
 
 //主界面面cell数组

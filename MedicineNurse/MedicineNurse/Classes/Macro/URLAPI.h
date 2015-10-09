@@ -11,9 +11,10 @@
 #define URLAPI_h
 
 //主界面的网址
-//推荐页面cell的网址
+//丁香推荐页面cell的网址
 #define kHomeTJURL @"http://dxy.com/app/i/columns/article/recommend?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&page_index=1&vc=4.0.5"
-
+//丁香界面点击cell进去的网址,替换id就可以了
+#define kHomeCellURL(p) [NSString stringWithFormat:@"http://dxy.com/app/i/columns/article/single?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&id=%@&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&vc=4.0.5",p]
 
 
   //center用药咨询
@@ -27,7 +28,7 @@
 //真相接口
 #define kHomeTURL @"http://dxy.com/app/i/columns/truth/article/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&page_index=1&vc=4.0.5"
 //肿瘤接口
-#define kHomeTumorURL(p) [NSString stringWithFormat:@"http://dxy.com/app/i/columns/article/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&channel_id=%d&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&order=publishTime&page_index=1&vc=4.0.5",p]
+#define kHomeTumorURL(p) [NSString stringWithFormat:@"http://dxy.com/app/i/columns/article/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&channel_id=%@&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&order=publishTime&page_index=1&vc=4.0.5",p]
 
 
 //常见病症网址

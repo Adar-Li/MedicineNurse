@@ -61,6 +61,11 @@
 		C2D15F181BC5485C000CB956 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D15F161BC5485C000CB956 /* HomeCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C2D15F1C1BC54C81000CB956 /* HCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D15F1A1BC54C81000CB956 /* HCCell.m */; settings = {ASSET_TAGS = (); }; };
 		C2D15F1D1BC54C81000CB956 /* HCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D15F1B1BC54C81000CB956 /* HCCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C2EC44C11BC7700600934592 /* HDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EC44C01BC7700600934592 /* HDetailModel.m */; settings = {ASSET_TAGS = (); }; };
+		C2EC44C41BC78F3600934592 /* HDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EC44C31BC78F3600934592 /* HDetailController.m */; settings = {ASSET_TAGS = (); }; };
+		C2EC44C91BC7B6EC00934592 /* lovew.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC44C61BC7B6EC00934592 /* lovew.png */; settings = {ASSET_TAGS = (); }; };
+		C2EC44CA1BC7B6EC00934592 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC44C71BC7B6EC00934592 /* share.png */; settings = {ASSET_TAGS = (); }; };
+		C2EC44CB1BC7B6EC00934592 /* Text.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC44C81BC7B6EC00934592 /* Text.png */; settings = {ASSET_TAGS = (); }; };
 		C2F35F011BC614B4000A6B4F /* IanScrollImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F35EFD1BC614B4000A6B4F /* IanScrollImageView.m */; settings = {ASSET_TAGS = (); }; };
 		C2F35F021BC614B4000A6B4F /* IanScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F35EFF1BC614B4000A6B4F /* IanScrollView.m */; settings = {ASSET_TAGS = (); }; };
 		C2F35F031BC614B4000A6B4F /* IanScrollViewDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F35F001BC614B4000A6B4F /* IanScrollViewDefault@2x.png */; settings = {ASSET_TAGS = (); }; };
@@ -179,6 +184,13 @@
 		C2D15F191BC54C81000CB956 /* HCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCell.h; sourceTree = "<group>"; };
 		C2D15F1A1BC54C81000CB956 /* HCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCell.m; sourceTree = "<group>"; };
 		C2D15F1B1BC54C81000CB956 /* HCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCCell.xib; sourceTree = "<group>"; };
+		C2EC44BF1BC7700600934592 /* HDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDetailModel.h; sourceTree = "<group>"; };
+		C2EC44C01BC7700600934592 /* HDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDetailModel.m; sourceTree = "<group>"; };
+		C2EC44C21BC78F3600934592 /* HDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDetailController.h; sourceTree = "<group>"; };
+		C2EC44C31BC78F3600934592 /* HDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDetailController.m; sourceTree = "<group>"; };
+		C2EC44C61BC7B6EC00934592 /* lovew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovew.png; sourceTree = "<group>"; };
+		C2EC44C71BC7B6EC00934592 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		C2EC44C81BC7B6EC00934592 /* Text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Text.png; sourceTree = "<group>"; };
 		C2F35EFC1BC614B4000A6B4F /* IanScrollImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanScrollImageView.h; sourceTree = "<group>"; };
 		C2F35EFD1BC614B4000A6B4F /* IanScrollImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanScrollImageView.m; sourceTree = "<group>"; };
 		C2F35EFE1BC614B4000A6B4F /* IanScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanScrollView.h; sourceTree = "<group>"; };
@@ -358,6 +370,8 @@
 				C28EA6E51BC3FE1400B394F5 /* a.h */,
 				C24F3DC21BC6583E00F65889 /* ViewController.h */,
 				C24F3DC31BC6583E00F65889 /* ViewController.m */,
+				C2EC44C21BC78F3600934592 /* HDetailController.h */,
+				C2EC44C31BC78F3600934592 /* HDetailController.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -373,12 +387,12 @@
 				C2002EA11BC4C7C30007F7B9 /* HomeController.h */,
 				C2002EA21BC4C7C30007F7B9 /* HomeController.m */,
 				C24C12191BC4A84E000EF4A0 /* CommonController.h */,
+				C24C121F1BC4A8C3000EF4A0 /* UserListController.h */,
 				C24C121A1BC4A84E000EF4A0 /* CommonController.m */,
 				C2D13ADA1BC6744A00D4B1F7 /* CommonClickController.h */,
 				C2D13ADB1BC6744A00D4B1F7 /* CommonClickController.m */,
 				C24C121C1BC4A8A2000EF4A0 /* NearbyViewController.h */,
 				C24C121D1BC4A8A2000EF4A0 /* NearbyViewController.m */,
-				C24C121F1BC4A8C3000EF4A0 /* UserListController.h */,
 				C24C12201BC4A8C3000EF4A0 /* UserListController.m */,
 			);
 			path = ViewControllers;
@@ -424,6 +438,8 @@
 				C2002E9E1BC4A96C0007F7B9 /* DrugAndnewsListModel.m */,
 				C2F35F0C1BC67461000A6B4F /* HSubjectModel.h */,
 				C2F35F0D1BC67461000A6B4F /* HSubjectModel.m */,
+				C2EC44BF1BC7700600934592 /* HDetailModel.h */,
+				C2EC44C01BC7700600934592 /* HDetailModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -431,6 +447,7 @@
 		C28EA6B81BC3C52700B394F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C2EC44C51BC7B6EC00934592 /* WQImage */,
 				C2F35EFB1BC614B4000A6B4F /* IanScrollViewLib */,
 				C23A32F11BC558E4007320E1 /* img */,
 				C2C2C21C1BC5362300125E4F /* location_no.png */,
@@ -508,6 +525,17 @@
 			children = (
 			);
 			path = Vendors;
+			sourceTree = "<group>";
+		};
+		C2EC44C51BC7B6EC00934592 /* WQImage */ = {
+			isa = PBXGroup;
+			children = (
+				C2EC44C61BC7B6EC00934592 /* lovew.png */,
+				C2EC44C71BC7B6EC00934592 /* share.png */,
+				C2EC44C81BC7B6EC00934592 /* Text.png */,
+			);
+			name = WQImage;
+			path = img/WQImage;
 			sourceTree = "<group>";
 		};
 		C2F35EFB1BC614B4000A6B4F /* IanScrollViewLib */ = {
@@ -635,6 +663,7 @@
 				C2D1396C1BC5F9CA00D4B1F7 /* Male.png in Resources */,
 				C23A32FF1BC558E4007320E1 /* Infect.png in Resources */,
 				C23A32FD1BC558E4007320E1 /* Child.png in Resources */,
+				C2EC44CB1BC7B6EC00934592 /* Text.png in Resources */,
 				C23A32E81BC53F0E007320E1 /* CommonClassifyCell.xib in Resources */,
 				C23A33031BC558E4007320E1 /* Organs.png in Resources */,
 				C24C12251BC4ABC5000EF4A0 /* default@2x.png in Resources */,
@@ -642,9 +671,11 @@
 				C23A33021BC558E4007320E1 /* Mentality.png in Resources */,
 				C23A32FE1BC558E4007320E1 /* Chinese.png in Resources */,
 				C2D1396E1BC5F9D100D4B1F7 /* Female.png in Resources */,
+				C2EC44C91BC7B6EC00934592 /* lovew.png in Resources */,
 				C2D15F181BC5485C000CB956 /* HomeCell.xib in Resources */,
 				C23A32EA1BC53F0E007320E1 /* CommonDetailsCell.xib in Resources */,
 				C28EA6841BC3A9DA00B394F5 /* Main.storyboard in Resources */,
+				C2EC44CA1BC7B6EC00934592 /* share.png in Resources */,
 				C23A33041BC558E4007320E1 /* Rheumatism.png in Resources */,
 				C27B507A1BC5F9DC00CB6E3E /* SufferViewController.xib in Resources */,
 				C2D15F1D1BC54C81000CB956 /* HCCell.xib in Resources */,
@@ -718,8 +749,10 @@
 				C27B50791BC5F9DC00CB6E3E /* SufferViewController.m in Sources */,
 				C24C121B1BC4A84E000EF4A0 /* CommonController.m in Sources */,
 				C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */,
+				C2EC44C11BC7700600934592 /* HDetailModel.m in Sources */,
 				C2F35F071BC66C47000A6B4F /* HSBCell.m in Sources */,
 				C2D15F171BC5485C000CB956 /* HomeCell.m in Sources */,
+				C2EC44C41BC78F3600934592 /* HDetailController.m in Sources */,
 				C23A32E91BC53F0E007320E1 /* CommonDetailsCell.m in Sources */,
 				C24C121E1BC4A8A2000EF4A0 /* NearbyViewController.m in Sources */,
 				C299EAF61BC3CF7E0087A7F8 /* CommonSymptomsModel.m in Sources */,
