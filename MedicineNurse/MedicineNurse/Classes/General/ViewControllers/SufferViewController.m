@@ -14,10 +14,16 @@
 #import "ViewController.h"
 
 @interface SufferViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
+@property (weak, nonatomic) IBOutlet UISearchBar *Search;
 @property (weak, nonatomic) IBOutlet UIView *BackView;
 @property (weak, nonatomic) IBOutlet UITableView *Table;
 @property (nonatomic ,strong)UIView  *tableFooterView;
-@property (strong, nonatomic) IBOutletCollection(UISearchBar) NSArray *Search;
+@property (nonatomic ,strong)NSMutableArray  *dataArray;
+@property (nonatomic ,strong)NSMutableArray  *Listdata;
+
+@property (nonatomic ,assign)NSInteger  page;
+
+
 
 @end
 
@@ -37,21 +43,70 @@
     
     [self.Table setScrollEnabled:NO];
     [self addFooterButton];
-    [[SufferHelper sharedSuffer]requestAllSufferWithFinish:^{
+    [[SufferHelper sharedSuffer]requestAllSufferWith:1 Finish:^{
         [self.Table reloadData];
     }];
+  
+    self.Search.delegate = self;
     
-//    self.Table.separatorColor = [UIColor blueColor];
-
     
+    _Search.showsSearchResultsButton = YES;
+ 
+    //键盘样式
+   
+    
+      // search的样式风格
+    _Search.barStyle = UIBarStyleBlackTranslucent;
+    _Search.keyboardType = UIKeyboardTypeDefault;
+    
+    [self.view addSubview:_Search];
+ 
 }
 
-- (void)Dispage
+   //点击searchbar的时候键盘自动加载到界面
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
 {
-
     
+    return YES;
     
 }
+
+  //编辑search的text时调用此函数
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    
+}
+
+
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
+{
+ 
+    return YES;
+    
+}
+
+
+//编辑完成后调用的函数
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    
+}
+
+
+//当textView的文字改变或者清除的时候调用此方法,搜索栏目前正在编辑,在编辑文本字段的当前文本
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    
+}
+
+
+   //点击search的时候调用
+- (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar
+{
+  
+    
+}
+
 
 
 
@@ -63,8 +118,7 @@
     label.frame = CGRectMake(5, 10, self.view.frame.size.width - 10, 30);
     label.text = @"用药经验";
     label.textColor = [UIColor redColor];
-    label.font = [UIFont systemFontOfSize:20];
- 
+    label.font = [UIFont systemFontOfSize:19];
     [self.BackView addSubview:label];
     
     
@@ -106,7 +160,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //返回四个cell
-    return [SufferHelper sharedSuffer].Allarray.count-16;
+    return [SufferHelper sharedSuffer].Allarray.count-17;
 
 }
 
@@ -127,7 +181,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-        return self.Table.frame.size.height/4 - 10;
+        return self.Table.frame.size.height/3 - 10;
     
 }
 
@@ -145,7 +199,18 @@
     [self.navigationController pushViewController:suffer animated:YES];
     
     
+    
 }
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [_Search resignFirstResponder];
+    
+}
+
+
+
 
 
 - (void)didReceiveMemoryWarning {

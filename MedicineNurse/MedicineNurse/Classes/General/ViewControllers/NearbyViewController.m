@@ -4,7 +4,6 @@
 //
 //  Created by lanou3g on 15/10/7.
 //  Copyright © 2015年 Adar-Li. All rights reserved.
-//
 
 #import "NearbyViewController.h"
 #import <MAMapKit/MAMapKit.h>
@@ -35,6 +34,9 @@
     }else{
         [_locationButton setImage:[UIImage imageNamed:@"location_yes"] forState:UIControlStateNormal];
     }
+    
+
+    
 }
 
 - (void)locationAction{
