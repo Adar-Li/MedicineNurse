@@ -166,7 +166,7 @@
 //回调用户信息,打印用户当前坐标
 - (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation
 {
-    NSLog(@"userLocation: %@", userLocation.location);
+//    NSLog(@"userLocation: %@", userLocation.location);
     //将打印出来的地址信息记录在变量当中
     _currentLocation = [userLocation.location copy];
     //    if(updatingLocation)

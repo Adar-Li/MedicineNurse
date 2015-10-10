@@ -52,7 +52,6 @@
             [self.dataArray addObject:data];
             
             
-            NSLog(@"%ld",self.dataArray.count);
             
             
         }

@@ -136,7 +136,6 @@
         
         sufferde.tail = [model.stag valueForKey:@"tagid"];
         
-        NSLog(@"===================%@",sufferde.tail);
         
         [self.navigationController pushViewController:sufferde animated:YES];
        
