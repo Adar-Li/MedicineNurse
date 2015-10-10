@@ -22,14 +22,6 @@ typedef NS_ENUM(NSInteger, AMapSearchLanguage)
 /// 搜索类
 @interface AMapSearchAPI : NSObject
 
-/*!
- @brief AMapSearch的初始化函数。注意，请不要直接使用init进行初始化，会因为有些属性没有初始化而发生错误。
- @param key 搜索模块鉴权Key(详情请访问 http://api.amap.com/ )
- @param delegate 实现AMapSearchDelegate协议的对象id
- @return AMapSearch类对象id
- */
-- (id)initWithSearchKey:(NSString *)key Delegate:(id<AMapSearchDelegate>)delegate;
-
 /// 实现了AMapSearchDelegate协议的类指针
 @property (nonatomic, weak) id<AMapSearchDelegate> delegate;
 
@@ -260,11 +252,5 @@ typedef NS_ENUM(NSInteger, AMapSearchLanguage)
  *  @param response 响应结果，具体字段参考 AMapNearbySearchResponse 。
  */
 - (void)onNearbySearchDone:(AMapNearbySearchRequest *)request response:(AMapNearbySearchResponse *)response;
-/*!
- @brief AMapSearch的初始化函数。注意，请不要直接使用init进行初始化，会因为有些属性没有初始化而发生错误。
- @param key 搜索模块鉴权Key(详情请访问 http://api.amap.com/ )
- @param delegate 实现AMapSearchDelegate协议的对象id
- @return AMapSearch类对象id
- */
-- (id)initWithSearchKey:(NSString *)key Delegate:(id<AMapSearchDelegate>)delegate;
+
 @end

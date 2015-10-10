@@ -33,7 +33,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     
     //执行事先写好的js代码
-    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.getElementsByClassName('class')[0].style.display = 'none'"];
+    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.getElementsByClassName('m_nav_bar')[0].style.display = 'none',document.getElementsByClassName('med_time')[0].style.display = 'none'"];
 }
 
 

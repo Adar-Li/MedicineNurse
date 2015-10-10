@@ -29,6 +29,11 @@ THE SOFTWARE.
 Copyright © 2014 AutoNavi. All Rights Reserved.
 
 
+## AMapSearch
+
+Copyright © 2014 AutoNavi. All Rights Reserved.
+
+
 ## SDWebImage
 
 Copyright (c) 2009 Olivier Poitrey <rs@dailymotion.com>

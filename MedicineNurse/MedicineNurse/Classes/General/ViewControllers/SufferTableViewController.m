@@ -67,7 +67,7 @@
     
     [self.tableView addInfiniteScrollingWithActionHandler:^{
        
-        [[SufferHelper sharedSuffer]requestAllSufferWith:*(weakself.page) Finish:^{
+        [[SufferHelper sharedSuffer]requestAllSufferWith:weakself.page Finish:^{
         
             [weakself.tableView.infiniteScrollingView stopAnimating];
        

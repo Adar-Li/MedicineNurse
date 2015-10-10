@@ -7,14 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "CommonController.h"
-#import "SufferTableViewController.h"
-#import "NearbyViewController.h"
-#import "UserListController.h"
-#import "HomeController.h"
-#import "SufferViewController.h"
-
-#import <UIKit/UIKit.h>
+#import "RootViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -27,49 +20,12 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor cyanColor];
     
+    RootViewController *Root = [[RootViewController alloc]init];
+//    UINavigationController *RootNC = [[UINavigationController alloc]initWithRootViewController:Root];
+    self.window.rootViewController = Root;
+
     [self.window makeKeyAndVisible];
-    
-    
-    UITabBarController *HomeBar = [[UITabBarController alloc]init];
-    UINavigationController *HomeNC = [[UINavigationController alloc]initWithRootViewController:[HomeController new]];
-    HomeNC.tabBarItem.title = @"首页";
-    HomeNC.title = @"首页";
-    
-    UINavigationController *common = [[UINavigationController alloc]initWithRootViewController:[CommonController new]];
-    
-    common.tabBarItem.title = @"常见病症";
-    common.title = @"常见病症";
-   
-    UINavigationController *suffer = [[UINavigationController alloc]initWithRootViewController:[SufferViewController new]];
-    suffer.tabBarItem.title = @"用药咨询";
-    suffer.title = @"用药咨询";
-    
-    
-    UINavigationController *Nearby = [[UINavigationController alloc]initWithRootViewController:[NearbyViewController new]];
-    Nearby.tabBarItem.title = @"附近";
-    
-    
-    UINavigationController *User = [[UINavigationController alloc]initWithRootViewController:[UserListController new]];
-    User.tabBarItem.title = @"用户";
-    
-    HomeBar.viewControllers = @[HomeNC ,common ,suffer,Nearby ,User];
-    
-    [HomeBar parentViewController];
-
-    
-    self.window.rootViewController = HomeBar;
-    //临时测试
-//    HomeController * homeVC = [[HomeController alloc]init];
-//    self.window.rootViewController = homeVC;
-
-//    //临时测试
-//    HomeController * homeVC = [[HomeController alloc]init];
-//    self.window.rootViewController = homeVC;
-
-    
- 
     return YES;
-    
 }
 
 
